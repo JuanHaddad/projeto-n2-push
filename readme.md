@@ -87,15 +87,6 @@ flowchart TD
 
 ---
 
-## 🎤 Roteiro Rápido de Demonstração (Apresentação)
-
-1. **Aba Pix**: Preencha um valor (ex: `50,00`), uma chave qualquer e a senha **`123456`**. Clique em *Enviar Pix* e observe a notificação chegar em **1s**.
-2. **Aba Carrinho (Cancelamento)**: Adicione um produto, troque de aba e **volte rapidamente (antes de 3s)** — mostre que o push foi cancelado.
-3. **Aba Carrinho (Conversão com Desconto)**: Troque de aba novamente e **aguarde 3s**. Quando o push chegar, **toque nele**: o app retorna automaticamente ao carrinho com o banner de **10% OFF** aplicado ao produto.
-4. **Aba Pedido**: Clique em *Pedir* em qualquer item do cardápio. Mostre o status inicial (*"Aguardando"*) e, após **10s**, veja a notificação chegar sincronizada com a atualização para *"Em preparo 👨‍🍳"*.
-
----
-
 ## ⚙️ Parâmetros Configuráveis no Código
 
 No topo do arquivo `App.js`, é possível ajustar facilmente os tempos e regras de negócio para testes:
