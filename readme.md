@@ -1,8 +1,6 @@
-Autores: \
-Arthur Benevides - 082230016 \
-Juan Pavani - 081240043 
-
 # 🔔 Painel de Push — Protótipo de Notificações Mobile
+
+> **Autores:** Arthur Benevides (`082230016`) • Juan Pavani (`081240043`)
 
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
@@ -50,40 +48,42 @@ flowchart TD
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **React Native**: Framework para construção de interfaces mobile nativas com JavaScript/React.
-* **Expo**: Ecossistema que simplifica o desenvolvimento, build e execução em emuladores (Android Studio / Pixel) e dispositivos físicos via **Expo Go**.
-* **`expo-notifications`**: Biblioteca responsável por:
-  * Criar canais de notificação no Android (`setNotificationChannelAsync` com importância `MAX` para exibir *heads-up banner* e vibração).
-  * Solicitar e verificar permissões do sistema operacional (`getPermissionsAsync` / `requestPermissionsAsync`).
-  * Agendar e cancelar notificações (`scheduleNotificationAsync` / `cancelScheduledNotificationAsync`).
-  * Capturar o clique do usuário na notificação (`useLastNotificationResponse`).
-* **React Hooks (`useState`, `useEffect`, `useRef`)**: Gerenciamento de estado das abas, carrinho, pedidos, controle de troca de tela e armazenamento de IDs de notificações agendadas sem causar re-renderizações desnecessárias.
+- **React Native**: Framework para construção de interfaces mobile nativas com JavaScript/React.
+- **Expo**: Ecossistema que simplifica o desenvolvimento, compilação nativa (**Development Build**) e execução em emuladores (Android Studio / Pixel) e dispositivos físicos.
+- **`expo-notifications`**: Biblioteca responsável por:
+  - Criar canais de notificação no Android (`setNotificationChannelAsync` com importância `MAX` para exibir *heads-up banner* e vibração).
+  - Solicitar e verificar permissões do sistema operacional (`getPermissionsAsync` / `requestPermissionsAsync`).
+  - Agendar e cancelar notificações (`scheduleNotificationAsync` / `cancelScheduledNotificationAsync`).
+  - Capturar o clique do usuário na notificação (`useLastNotificationResponse`).
+- **React Hooks (`useState`, `useEffect`, `useRef`)**: Gerenciamento de estado das abas, carrinho, pedidos, controle de troca de tela e armazenamento de IDs de notificações agendadas sem causar re-renderizações desnecessárias.
 
 ---
 
 ## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
-* [Node.js](https://nodejs.org/) instalado.
-* **Android Studio** (com emulador Pixel configurado) ou celular físico com o app **Expo Go**.
+- [Node.js](https://nodejs.org/) instalado.
+- **Android Studio** com um emulador Android configurado (ex: Pixel 5 — API 34) e variáveis de ambiente `JAVA_HOME` e `ANDROID_HOME` configuradas no terminal.
 
-### Passo a passo
+### Passo a passo (Development Build)
 1. Instale as dependências do projeto:
    ```bash
    npm install
    ```
-2. Certifique-se de ter a biblioteca de notificações instalada:
+2. Compile e instale o build nativo no emulador Android (necessário apenas na primeira execução ou ao alterar dependências nativas):
    ```bash
-   npx expo install expo-notifications
+   npx expo run:android
    ```
-3. Inicie o servidor do Expo:
+3. Nas próximas execuções (com o app já instalado no emulador), basta iniciar o servidor de desenvolvimento:
    ```bash
-   npx expo start
+   npx expo start --dev-client
    ```
-4. Pressione **`a`** no terminal para abrir no emulador Android (ou escaneie o QR Code no Expo Go).
+
+> 💡 **Por que Development Build em vez de Expo Go?**  
+> A partir do Expo SDK 53, o Expo Go possui restrições no Android para o módulo `expo-notifications` (como criação de canais e abertura do app via toque na notificação quando fechado). Usar `npx expo run:android` gera o APK nativo do projeto, garantindo funcionamento completo.
 
 > ⚠️ **Atenção no Android 13+ / Emulador Pixel:**  
-> Caso as notificações não apareçam, acesse **Configurações do aparelho > Apps > Expo Go (ou seu App) > Notificações** e verifique se a permissão está ativada.
+> Caso as notificações não apareçam, acesse **Configurações do aparelho > Apps > [Nome do App] > Notificações** e verifique se a permissão está ativada.
 
 ---
 
