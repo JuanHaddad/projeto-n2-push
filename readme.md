@@ -1,3 +1,7 @@
+Autores:
+Arthur Benevides - 082230016
+Juan Pavani - 081240043
+
 # 🔔 Painel de Push — Protótipo de Notificações Mobile
 
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
