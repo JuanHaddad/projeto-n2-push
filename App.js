@@ -230,7 +230,7 @@ export default function App() {
       </View>
 
       {/* Banner de aviso exibido apenas se o usuário negar permissão de notificação */}
-      {pushOk && (
+      {!pushOk && (
         <View style={s.warn}>
           <Text style={s.warnText}>
             Permissão de notificação negada. Ative nas configurações do aparelho para ver os pushes.
