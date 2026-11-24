@@ -1,6 +1,6 @@
-Autores:
-Arthur Benevides - 082230016
-Juan Pavani - 081240043
+Autores: \
+Arthur Benevides - 082230016 \
+Juan Pavani - 081240043 \
 
 # 🔔 Painel de Push — Protótipo de Notificações Mobile
 
